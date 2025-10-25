@@ -1,0 +1,155 @@
+body {
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #019d71 0%, #019d71 100%);
+    min-height: 100vh;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.container {
+    background: #d0e08d;
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px #7a864f;
+    margin-bottom: 20px;
+    border: 1px solid #036842;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px #025233;
+}
+
+h1 {
+    color: #172015;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #f09109, #f0bf08);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+h2 {
+    color: #172015;
+    border-bottom: 3px solid #f09109;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+    text-align: center;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    border-radius: 2px;
+}
+
+h3 {
+    color: #172015;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #172015;
+    font-size: 0.95rem;
+}
+
+.curso-info {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #f09109;
+}
+
+.curso-info p {
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: 0;
+    padding-left: 20px;
+}
+
+ul li {
+    color: #172015;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.proyecto-final {
+    background: rgba(240, 145, 9, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #f09109;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(45deg, #007c34, #003817);
+    color: #e0f19c;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px #022e14;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px #008136;
+}
+
+#iniciar {
+    position: static;
+    float: none;
+    margin: 0;
+}
+
+.btn-inscribir {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0 auto;
+    background: linear-gradient(45deg, #f09109, #f0bf08);
+    color: #172015;
+    font-weight: 700;
+}
+
+.btn-inscribir:hover {
+    background: linear-gradient(45deg, #f0bf08, #f09109);
+    box-shadow: 0 6px 20px rgba(240, 145, 9, 0.5);
+}

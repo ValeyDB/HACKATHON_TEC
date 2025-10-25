@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+     <div class="header-container">
+        <h1>REVIA - Cursos para Alumnos</h1>
+        <button id="volver" onclick="volver()">Volver</button>
+    </div>
+    
+    <div class="grid">
+        <!-- CURSO 1 -->
+        <div class="container curso-card">
+            <h2>CURSO 1: "Plantación Exitosa"</h2>
+            
+            <div class="info-basica">
+                <p><strong>Recomendado a:</strong> Estudiantes de ingeniería, tecnología y ciencias</p>
+                <p><strong>Duración:</strong> 8 semanas</p>
+                <p><strong>Horas de servicio social:</strong> 40 horas certificadas</p>
+            </div>
+
+            <h3>Problemáticas que resuelve:</h3>
+            <ul class="problematicas">
+                <li>¿Cansado de que tus plantas se marchiten sin saber por qué?</li>
+                <li>¿Frustrado porque nunca sabes si tus cultivos bajo tierra siguen vivos?</li>
+                <li>¿Harto de perder cosechas por temperaturas extremas?</li>
+            </ul>
+
+            <h3>Lo que aprenderás:</h3>
+            <ul class="aprendizaje">
+                <li><strong>Automatización del riego y fertirriego:</strong> Implementa sistemas con electroválvulas y sensores de humedad que riegan exactamente cuando la planta lo necesita, no cuando tú lo recuerdas</li>
+                <li><strong>Monitoreo inteligente:</strong> Instala sensores de temperatura y humedad que te alertan en tu celular antes de que sea demasiado tarde</li>
+                <li><strong>Cultivo subterráneo:</strong> Técnicas con cámaras de inspección y sensores de CO₂ en sustrato para saber exactamente qué sucede bajo tierra sin excavar</li>
+                <li><strong>Protección térmica automatizada:</strong> Sistemas de ventilación y calefacción que mantienen la temperatura ideal 24/7</li>
+            </ul>
+
+            <div class="proyecto-final">
+                <h3>Proyecto final:</h3>
+                <p>Diseña y construye tu propio sistema de monitoreo IoT para invernadero con alertas en tiempo real</p>
+            </div>
+
+            <button class="btn-inscribir" onclick="inscribir(1)">Inscribirme</button>
+        </div>
+
+        <!-- CURSO 2 -->
+        <div class="container curso-card">
+            <h2>CURSO 2: "Cultivo Exótico"</h2>
+            
+            <div class="info-basica">
+                <p><strong>Recomendado a:</strong> Estudiantes de nutrición, gastronomía, administración</p>
+                <p><strong>Duración:</strong> 10 semanas</p>
+                <p><strong>Horas de servicio social:</strong> 50 horas certificadas</p>
+            </div>
+
+            <h3>Problemáticas que resuelve:</h3>
+            <ul class="problematicas">
+                <li>¿Por qué pagar $200 pesos por arándanos cuando puedes cultivarlos?</li>
+                <li>¿Quieres una dieta rica en antioxidantes, pero tu presupuesto no alcanza?</li>
+                <li>¿Buscas opciones veganas frescas y económicas?</li>
+            </ul>
+
+            <h3>Lo que aprenderás:</h3>
+            <ul class="aprendizaje">
+                <li><strong>Cultivo de frutas de alto valor:</strong> Fresas, arándanos, frambuesas y moras fuera de temporada en invernadero controlado</li>
+                <li><strong>Economía circular aplicada:</strong> Calcula el ROI real de cultivar vs. comprar productos premium</li>
+                <li><strong>Vegetales ricos en antioxidantes:</strong> Kale, espinaca morada, betabel y microgreens (germinados) con 40 veces más nutrientes</li>
+                <li><strong>Producción vegana de alta calidad:</strong> Cultiva ingredientes para proteína vegetal, alta fibra y reducción de problemas del sistema inmunológico</li>
+                <li><strong>Germinación garantizada:</strong> Domina técnicas profesionales de germinado con tasas de éxito del 85%</li>
+            </ul>
+
+            <div class="proyecto-final">
+                <h3>Proyecto final:</h3>
+                <p>Crea tu propio menú cultivando 5 ingredientes que normalmente solo están disponibles importados o en temporada</p>
+            </div>
+
+            <button class="btn-inscribir" onclick="inscribir(2)">Inscribirme</button>
+        </div>
+
+        <!-- CURSO 3 -->
+        <div class="container curso-card">
+            <h2>CURSO 3: "Cultivo Limpio"</h2>
+            
+            <div class="info-basica">
+                <p><strong>Recomendado a:</strong> Equipos multidisciplinarios</p>
+                <p><strong>Duración:</strong> 6 semanas</p>
+                <p><strong>Horas de servicio social:</strong> 30 horas certificadas</p>
+            </div>
+
+            <h3>Problemáticas que resuelve:</h3>
+            <ul class="problematicas">
+                <li>¿Te da asco la tierra, los bichitos y las manchas?</li>
+                <li>¿Quieres los beneficios de cultivar sin el "batidero"?</li>
+                <li>¿Buscas jardinería moderna, no del siglo pasado?</li>
+            </ul>
+
+            <h3>Lo que aprenderás:</h3>
+            <ul class="aprendizaje">
+                <li><strong>Hidroponía y aeroponía:</strong> Cultiva SIN tierra, cero bichitos, cero manchas</li>
+                <li><strong>Sistemas verticales cerrados:</strong> Diseño de torres de cultivo que parecen muebles modernos</li>
+                <li><strong>Control de plagas tecnológico:</strong> Trampas UV, barreras físicas y biocontrol, olvídate de los insecticidas tóxicos</li>
+                <li><strong>Espacios de recreación limpios:</strong> Diseña invernaderos estéticamente dignos de Instagram, no corrales desordenados</li>
+                <li><strong>Vestimenta y herramientas:</strong> Equipo profesional que mantiene todo limpio y organizado</li>
+            </ul>
+
+            <div class="proyecto-final">
+                <h3>Proyecto final:</h3>
+                <p>Monta una estación hidropónica vertical minimalista en 2m² que produce lechugas gourmet sin tocar tierra</p>
+            </div>
+
+            <button class="btn-inscribir" onclick="inscribir(3)">Inscribirme</button>
+        </div>
+
+        <!-- CURSO 4 -->
+        <div class="container curso-card">
+            <h2>CURSO 4: "GreenLab"</h2>
+            
+            <div class="info-basica">
+                <p><strong>Recomendado a:</strong> Equipos multidisciplinarios</p>
+                <p><strong>Duración:</strong> 12 semanas</p>
+                <p><strong>Horas de servicio social:</strong> 60-80 horas certificadas (variables según proyecto)</p>
+            </div>
+
+            <h3>Problemáticas que resuelve:</h3>
+            <ul class="problematicas">
+                <li>¿Necesitas un proyecto real para liberar servicio social con impacto?</li>
+                <li>¿Quieres colaborar con otras carreras, pero no hay espacios comunes?</li>
+                <li>¿Buscas aplicar tu conocimiento técnico en algo tangible?</li>
+            </ul>
+
+            <h3>Lo que aprenderás:</h3>
+            <ul class="aprendizaje">
+                <li><strong>Diseño de economía circular:</strong> Crea sistemas cerrados donde residuos orgánicos se convierten en compost, agua se recicla y energía se optimiza</li>
+                <li><strong>Recreación de espacios verdes:</strong> Arquitectura de invernaderos como áreas de estudio, meditación y convivencia</li>
+                <li><strong>Integración tecnológica completa:</strong> Desde sensores y electroválvulas hasta dashboards de análisis de datos</li>
+                <li><strong>Modelo de negocio sostenible:</strong> Calcula costos, proyecta ventas de productos cultivados y diseña estrategias de comercialización</li>
+                <li><strong>Consumo responsable y vitaminas:</strong> Produce alimentos que reducen problemas del sistema inmunológico en la comunidad estudiantil</li>
+            </ul>
+
+            <div class="proyecto-final">
+                <h3>Proyecto final:</h3>
+                <p>Equipos multidisciplinarios diseñan, construyen y operan un invernadero funcional que genera ingresos reales para la institución</p>
+            </div>
+
+            <button class="btn-inscribir" onclick="inscribir(4)">Inscribirme</button>
+        </div>
+    </div>
+</body>
+</html>
