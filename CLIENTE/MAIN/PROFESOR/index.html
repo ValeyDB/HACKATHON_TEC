@@ -4,9 +4,317 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    
+     <div class="header-container">
+        <h1>MANUALES PARA PROFESORES</h1>
+        <button id="iniciar" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <div class="container">
+        <h2>CURSO 1: "Plantación Exitosa"</h2>
+        <div class="curso-info">
+            <p><strong>Manual del Profesor:</strong> 120 páginas</p>
+            <p><strong>Horas de preparación:</strong> 12 horas</p>
+            <p><strong>Material digital incluido:</strong> USB con videos, software libre y plantillas</p>
+        </div>
+
+        <h3>Sección 1: Fundamentos Técnicos</h3>
+        <p class="section-title">Material de consulta obligatorio:</p>
+        <ul>
+            <li>"Automated Greenhouse Systems" - Giacomelli & Roberts</li>
+            <li>Normas ISO 16484 para automatización de edificios agrícolas</li>
+            <li>Documentación técnica de Arduino/Raspberry Pi para agricultura</li>
+        </ul>
+
+        <h3>Sección 2: Sistemas de Riego y Fertirriego</h3>
+        <p class="section-title">Recursos base:</p>
+        <ul>
+            <li>Manual FAO sobre "Riego por Goteo: Teoría y Práctica"</li>
+            <li>Guías de cálculo de necesidades hídricas por cultivo</li>
+            <li>Tablas de soluciones nutritivas Hoagland y Steiner</li>
+            <li>Videos tutoriales: Instalación de electroválvulas y programación de temporizadores</li>
+        </ul>
+
+        <h3>Sección 3: Sensórica y Monitoreo</h3>
+        <p class="section-title">Material técnico incluido:</p>
+        <ul>
+            <li>Fichas técnicas de sensores: humedad de suelo, temperatura, pH, conductividad eléctrica</li>
+            <li>Software de monitoreo IoT: ThingSpeak, Blynk (tutoriales paso a paso)</li>
+            <li>Hojas de cálculo para interpretación de datos de sensores</li>
+        </ul>
+
+        <h3>Sección 4: Control Climático</h3>
+        <p class="section-title">Referencias científicas:</p>
+        <ul>
+            <li>"Greenhouse Climate Control: An Integrated Approach" - Bakker et al.</li>
+            <li>Tablas de rangos óptimos de temperatura/humedad por especie</li>
+            <li>Calculadoras de ventilación y BTU para calefacción</li>
+        </ul>
+
+        <div class="material-section">
+            <h3>Material Práctico para Estudiantes:</h3>
+            <ul>
+                <li>15 ejercicios de cálculo hidráulico</li>
+                <li>8 proyectos de programación básica</li>
+                <li>5 casos de estudio de invernaderos automatizados reales</li>
+                <li>Plantillas para diseño de sistemas en AutoCAD/SketchUp (incluidas)</li>
+            </ul>
+        </div>
+
+        <div class="evaluacion-section">
+            <h3>Evaluación:</h3>
+            <ul>
+                <li>Rúbricas detalladas para proyecto final</li>
+                <li>4 exámenes parciales con respuestas</li>
+                <li>Lista de verificación para funcionamiento de sistemas</li>
+            </ul>
+        </div>
+
+        <button class="btn-descargar" onclick="descargarManual(1)">Descargar Manual</button>
+    </div>
+
+    <div class="container">
+        <h2>CURSO 2: "Cultivo Exótico"</h2>
+        <div class="curso-info">
+            <p><strong>Manual del Profesor:</strong> 95 páginas</p>
+            <p><strong>Horas de preparación:</strong> 10 horas</p>
+            <p><strong>Material adicional:</strong> Acceso a webinars mensuales con nutricionistas</p>
+        </div>
+
+        <h3>Sección 1: Valor Nutricional y Economía</h3>
+        <p class="section-title">Bibliografía base:</p>
+        <ul>
+            <li>"Phytochemical and Antioxidant Properties of Fruits and Vegetables" - Journal of Food Science</li>
+            <li>Base de datos USDA de composición nutricional</li>
+            <li>Estudios sobre fibra dietética y salud del sistema inmunológico</li>
+            <li>Artículos sobre dietas veganas balanceadas (Academy of Nutrition and Dietetics)</li>
+        </ul>
+
+        <h3>Sección 2: Cultivo de Berries y Frutas Premium</h3>
+        <p class="section-title">Material técnico:</p>
+        <ul>
+            <li>"Small Fruit Crop Management" - Strik & Finn</li>
+            <li>Protocolos de fotoperiodo para producción fuera de temporada</li>
+            <li>Fichas de variedades: fresas albión, arándanos duke, frambuesas heritage</li>
+            <li>Calendarios de siembra/cosecha por zona climática</li>
+        </ul>
+
+        <h3>Sección 3: Germinación Profesional</h3>
+        <p class="section-title">Recursos incluidos:</p>
+        <ul>
+            <li>Protocolos de escarificación y estratificación por especie</li>
+            <li>Recetas para medios de germinación profesionales</li>
+            <li>Troubleshooting: Guía de 20 problemas comunes y soluciones</li>
+            <li>Videos time-lapse de germinación de 10 especies</li>
+        </ul>
+
+        <h3>Sección 4: Economía Circular Aplicada</h3>
+        <p class="section-title">Material didáctico:</p>
+        <ul>
+            <li>Calculadoras de costos pre-programadas en Excel</li>
+            <li>Estudios de caso: ROI de invernaderos educativos</li>
+            <li>Plantillas para análisis de mercado local</li>
+            <li>Guía de compostaje y reciclaje de nutrientes</li>
+        </ul>
+
+        <h3>Sección 5: Microgreens y Supervegetales</h3>
+        <p class="section-title">Referencias:</p>
+        <ul>
+            <li>"Microgreens: Novel Fresh and Functional Food" - Di Gioia et al.</li>
+            <li>Tablas comparativas: contenido de antioxidantes vs. plantas maduras</li>
+            <li>Protocolos de cosecha y almacenamiento</li>
+        </ul>
+
+        <div class="material-section">
+            <h3>Material Práctico para Estudiantes:</h3>
+            <ul>
+                <li>20 fichas de cultivo ilustradas</li>
+                <li>12 recetas saludables con productos del invernadero</li>
+                <li>6 proyectos de análisis económico</li>
+                <li>Kit de germinación para 15 especies diferentes</li>
+            </ul>
+        </div>
+
+        <div class="evaluacion-section">
+            <h3>Evaluación:</h3>
+            <ul>
+                <li>Portafolio de evidencias (formato incluido)</li>
+                <li>3 reportes de análisis nutricional</li>
+                <li>Proyecto final: Business plan de venta de productos</li>
+            </ul>
+        </div>
+
+        <button class="btn-descargar" onclick="descargarManual(2)">Descargar Manual</button>
+    </div>
+
+    <div class="container">
+        <h2>CURSO 3: "Cultivo Limpio"</h2>
+        <div class="curso-info">
+            <p><strong>Manual del Profesor:</strong> 75 páginas</p>
+            <p><strong>Horas de preparación:</strong> 8 horas</p>
+            <p><strong>Material especial:</strong> Kit de inicio con semillas y nutrientes para 30 estudiantes</p>
+        </div>
+
+        <h3>Sección 1: Sistemas Sin Suelo</h3>
+        <p class="section-title">Literatura fundamental:</p>
+        <ul>
+            <li>"Hydroponic Food Production" - Howard M. Resh</li>
+            <li>"The Aeroponic Advantage" - NASA Technical Papers</li>
+            <li>Guías de construcción de sistemas NFT (Nutrient Film Technique)</li>
+            <li>Videos: Ensamblaje de torres verticales paso a paso</li>
+        </ul>
+
+        <h3>Sección 2: Diseño Estético y Funcional</h3>
+        <p class="section-title">Recursos creativos:</p>
+        <ul>
+            <li>Revista "Urban Agriculture Magazine" - Ediciones seleccionadas</li>
+            <li>Pinterest boards curados: 50+ diseños de invernaderos modernos</li>
+            <li>Software de diseño 3D (licencias educativas incluidas)</li>
+            <li>Guía de materiales: plásticos seguros, madera tratada, metales</li>
+        </ul>
+
+        <h3>Sección 3: Control de Plagas Tecnológico</h3>
+        <p class="section-title">Material científico:</p>
+        <ul>
+            <li>"Integrated Pest Management for Greenhouses" - Extension Services</li>
+            <li>Guías de identificación de plagas comunes (laminadas)</li>
+            <li>Protocolos de biocontrol con organismos beneficiosos</li>
+            <li>Fichas técnicas de trampas cromáticas y UV</li>
+        </ul>
+
+        <h3>Sección 4: Protocolos de Higiene</h3>
+        <p class="section-title">Estándares incluidos:</p>
+        <ul>
+            <li>Normas de bioseguridad adaptadas de industria alimentaria</li>
+            <li>Listas de verificación sanitaria semanales</li>
+            <li>Guías de vestimenta y equipo de protección personal</li>
+            <li>SOPs (Standard Operating Procedures) ilustrados</li>
+        </ul>
+
+        <div class="material-section">
+            <h3>Material Práctico para Estudiantes:</h3>
+            <ul>
+                <li>10 planos de sistemas hidropónicos DIY</li>
+                <li>5 proyectos de diseño estético</li>
+                <li>Catálogo de proveedores con precios actualizados</li>
+                <li>App de identificación de plagas (acceso gratuito)</li>
+            </ul>
+        </div>
+
+        <div class="evaluacion-section">
+            <h3>Evaluación:</h3>
+            <ul>
+                <li>Diseño y construcción de sistema (70%)</li>
+                <li>Portafolio fotográfico de proceso (20%)</li>
+                <li>Presentación final estilo pitch (10%)</li>
+            </ul>
+        </div>
+
+        <button class="btn-descargar" onclick="descargarManual(3)">Descargar Manual</button>
+    </div>
+
+    <div class="container">
+        <h2>CURSO 4: "GreenLab"</h2>
+        <div class="curso-info">
+            <p><strong>Manual del Profesor:</strong> 150 páginas + Módulos por Disciplina</p>
+            <p><strong>Horas de preparación:</strong> 20 horas (se sugiere equipo de 3-4 profesores)</p>
+            <p><strong>Soporte especial:</strong> Asesoría mensual con especialistas externos</p>
+        </div>
+
+        <h3>MÓDULO BASE: Coordinación Interdisciplinaria</h3>
+        <p class="section-title">Lecturas fundamentales:</p>
+        <ul>
+            <li>"Project-Based Learning in Agriculture" - Case Studies</li>
+            <li>Metodologías ágiles aplicadas a educación (SCRUM educativo)</li>
+            <li>Dinámicas de trabajo en equipos multidisciplinarios</li>
+            <li>Rúbricas de evaluación colaborativa</li>
+        </ul>
+
+        <h3>MÓDULO INGENIERÍA</h3>
+        <p class="section-title">Material técnico especializado:</p>
+        <ul>
+            <li>Diseño estructural de invernaderos (software incluido)</li>
+            <li>Sistemas de automatización completa (PLC y microcontroladores)</li>
+            <li>Energías renovables aplicadas: solar, eólica</li>
+            <li>Tutoriales de programación IoT avanzada</li>
+            <li>Referencias: IEEE papers sobre agricultura de precisión</li>
+        </ul>
+
+        <h3>MÓDULO DISEÑO/ARQUITECTURA</h3>
+        <p class="section-title">Recursos creativos:</p>
+        <ul>
+            <li>"The Vertical Farm" - Dickson Despommier</li>
+            <li>Biofilia y arquitectura bioclimática</li>
+            <li>Software de renderizado 3D (licencias temporales)</li>
+            <li>Casos de estudio: invernaderos como espacios recreativos</li>
+            <li>Paletas de color y materiales sustentables</li>
+        </ul>
+
+        <h3>MÓDULO ADMINISTRACIÓN/NEGOCIOS</h3>
+        <p class="section-title">Herramientas financieras:</p>
+        <ul>
+            <li>Plantillas de business model canvas</li>
+            <li>Análisis de viabilidad económica (Excel avanzado)</li>
+            <li>Estrategias de comercialización para productos orgánicos</li>
+            <li>Casos Harvard: empresas de agricultura urbana</li>
+            <li>Modelos de economía circular aplicados</li>
+        </ul>
+
+        <h3>MÓDULO CIENCIAS (Biología/Agronomía)</h3>
+        <p class="section-title">Base científica:</p>
+        <ul>
+            <li>Protocolos de investigación experimental</li>
+            <li>Diseño de experimentos con controles</li>
+            <li>Estadística aplicada a ciencias agrícolas</li>
+            <li>Manuales de buenas prácticas agrícolas</li>
+            <li>Artículos sobre sistema inmunológico y nutrición vegetal</li>
+        </ul>
+
+        <h3>MÓDULO NUTRICIÓN/SALUD</h3>
+        <p class="section-title">Material especializado:</p>
+        <ul>
+            <li>Análisis bromatológico de alimentos</li>
+            <li>Diseño de menús institucionales con productos del invernadero</li>
+            <li>Estudios sobre consumo de vitaminas y salud estudiantil</li>
+            <li>Certificaciones de alimentos orgánicos</li>
+            <li>Guías de inocuidad alimentaria</li>
+        </ul>
+
+        <h3>Sección Transversal: Economía Circular</h3>
+        <p class="section-title">Contenido integrador:</p>
+        <ul>
+            <li>Ciclo de vida de productos: del invernadero al compost</li>
+            <li>Cálculo de huella de carbono</li>
+            <li>Sistemas de captación de agua pluvial</li>
+            <li>Reciclaje de residuos orgánicos de cafeterías</li>
+            <li>Mapeos de flujo de materiales</li>
+        </ul>
+
+        <div class="material-section">
+            <h3>Material Práctico General:</h3>
+            <ul>
+                <li>Kit de herramientas colaborativas digitales (Trello, Miro, Notion)</li>
+                <li>20 plantillas de documentos profesionales</li>
+                <li>Acceso a base de datos de proveedores</li>
+                <li>Formatos de liberación de servicio social pre-aprobados</li>
+            </ul>
+        </div>
+
+        <div class="evaluacion-section">
+            <h3>Evaluación Interdisciplinaria:</h3>
+            <ul>
+                <li>Propuesta técnica completa (20%)</li>
+                <li>Construcción y documentación (30%)</li>
+                <li>Presentación ejecutiva tipo pitch (15%)</li>
+                <li>Operación durante 1 mes (20%)</li>
+                <li>Impacto medible en comunidad (15%)</li>
+            </ul>
+        </div>
+
+        <button class="btn-descargar" onclick="descargarManual(4)">Descargar Manual</button>
+    </div>
 </body>
 </html>

@@ -37,5 +37,3 @@ function iniciar() {
     const datos = {
         //Rellenar
     }};
-
-//Tonto
