@@ -1,0 +1,27 @@
+{
+  "name": "hackaton_tec",
+  "version": "1.0.0",
+  "description": "Proyecto de invernadero urbano inteligente",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValeyDB/HACKATHON_TEC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValeyDB/HACKATHON_TEC/issues"
+  },
+  "homepage": "https://github.com/ValeyDB/HACKATHON_TEC#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
