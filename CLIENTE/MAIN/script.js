@@ -1,3 +1,4 @@
+// proof
 // CONFIGURACIÓN
 const API_URL = "http://localhost:3000";
 const TOKEN = "INVERNADERO2025";
