@@ -1,6 +1,3 @@
-// proof2
-
-// proof
 // CONFIGURACIÓN
 const API_URL = "http://localhost:3000";
 const TOKEN = "INVERNADERO2025";
@@ -35,3 +32,8 @@ function conectar() {
     });
 }
 
+// INICIAR SESIÓN
+function iniciar() {
+    const datos = {
+       //Rellenar
+    }};
