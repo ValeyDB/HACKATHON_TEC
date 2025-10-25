@@ -38,3 +38,4 @@ function iniciar() {
         //Rellenar
     }};
 
+//Tonto
