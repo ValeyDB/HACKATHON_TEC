@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div class="header-container">
+        <link rel="stylesheet" href="style.css">
+        <h1>PANEL DE ADMINISTRACIÓN</h1>
+        <button id="iniciar" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <!-- Dashboard de Estadísticas -->
+    <div class="dashboard-grid">
+        <div class="stat-card">
+            <h3>Cursos Activos</h3>
+            <p class="stat-number" id="cursosActivos">4</p>
+            <p class="stat-label">Total de cursos</p>
+        </div>
+        <div class="stat-card">
+            <h3>Estudiantes Inscritos</h3>
+            <p class="stat-number" id="estudiantesTotal">127</p>
+            <p class="stat-label">En todos los cursos</p>
+        </div>
+        <div class="stat-card">
+            <h3>Profesores Asignados</h3>
+            <p class="stat-number" id="profesoresTotal">8</p>
+            <p class="stat-label">Activos</p>
+        </div>
+        <div class="stat-card">
+            <h3>Invernaderos</h3>
+            <p class="stat-number" id="invernaderosTotal">3</p>
+            <p class="stat-label">En operación</p>
+        </div>
+    </div>
+
+    <!-- Gestión de Cursos -->
+    <div class="container">
+        <h2>GESTIÓN DE CURSOS</h2>
+        
+        <div class="curso-admin">
+            <div class="curso-header">
+                <h3>CURSO 1: Plantación Exitosa</h3>
+                <span class="badge badge-activo">Activo</span>
+            </div>
+            <div class="curso-details">
+                <p><strong>Estudiantes inscritos:</strong> 38</p>
+                <p><strong>Profesor asignado:</strong> Dr. Juan Pérez</p>
+                <p><strong>Duración:</strong> 8 semanas</p>
+                <p><strong>Inicio:</strong> 15 de Septiembre 2024</p>
+            </div>
+            <div class="curso-actions">
+                <button class="btn-editar" onclick="editarCurso(1)">Editar Curso</button>
+                <button class="btn-asignar" onclick="asignarProfesor(1)">Asignar Profesor</button>
+                <button class="btn-ver" onclick="verEstudiantes(1)">Ver Estudiantes</button>
+            </div>
+        </div>
+
+        <div class="curso-admin">
+            <div class="curso-header">
+                <h3>CURSO 2: Cultivo Exótico</h3>
+                <span class="badge badge-activo">Activo</span>
+            </div>
+            <div class="curso-details">
+                <p><strong>Estudiantes inscritos:</strong> 42</p>
+                <p><strong>Profesor asignado:</strong> Dra. María González</p>
+                <p><strong>Duración:</strong> 10 semanas</p>
+                <p><strong>Inicio:</strong> 1 de Octubre 2024</p>
+            </div>
+            <div class="curso-actions">
+                <button class="btn-editar" onclick="editarCurso(2)">Editar Curso</button>
+                <button class="btn-asignar" onclick="asignarProfesor(2)">Asignar Profesor</button>
+                <button class="btn-ver" onclick="verEstudiantes(2)">Ver Estudiantes</button>
+            </div>
+        </div>
+
+        <div class="curso-admin">
+            <div class="curso-header">
+                <h3>CURSO 3: Cultivo Limpio</h3>
+                <span class="badge badge-activo">Activo</span>
+            </div>
+            <div class="curso-details">
+                <p><strong>Estudiantes inscritos:</strong> 29</p>
+                <p><strong>Profesor asignado:</strong> Ing. Carlos Ramírez</p>
+                <p><strong>Duración:</strong> 6 semanas</p>
+                <p><strong>Inicio:</strong> 8 de Octubre 2024</p>
+            </div>
+            <div class="curso-actions">
+                <button class="btn-editar" onclick="editarCurso(3)">Editar Curso</button>
+                <button class="btn-asignar" onclick="asignarProfesor(3)">Asignar Profesor</button>
+                <button class="btn-ver" onclick="verEstudiantes(3)">Ver Estudiantes</button>
+            </div>
+        </div>
+
+        <div class="curso-admin">
+            <div class="curso-header">
+                <h3>CURSO 4: GreenLab</h3>
+                <span class="badge badge-activo">Activo</span>
+            </div>
+            <div class="curso-details">
+                <p><strong>Estudiantes inscritos:</strong> 18</p>
+                <p><strong>Profesores asignados:</strong> Equipo multidisciplinario (3)</p>
+                <p><strong>Duración:</strong> 12 semanas</p>
+                <p><strong>Inicio:</strong> 22 de Septiembre 2024</p>
+            </div>
+            <div class="curso-actions">
+                <button class="btn-editar" onclick="editarCurso(4)">Editar Curso</button>
+                <button class="btn-asignar" onclick="asignarProfesor(4)">Asignar Profesores</button>
+                <button class="btn-ver" onclick="verEstudiantes(4)">Ver Estudiantes</button>
+            </div>
+        </div>
+
+        <button class="btn-nuevo-curso" onclick="crearNuevoCurso()">+ Crear Nuevo Curso</button>
+    </div>
+
+    <!-- Monitoreo de Sensores en Tiempo Real -->
+    <div class="container">
+        <h2>MONITOREO DE SENSORES EN TIEMPO REAL</h2>
+        
+        <div class="invernadero-selector">
+            <label for="selectInvernadero"><strong>Seleccionar Invernadero:</strong></label>
+            <select id="selectInvernadero" onchange="cambiarInvernadero(this.value)">
+                <option value="1">Invernadero 1 - Zona Norte</option>
+                <option value="2">Invernadero 2 - Zona Sur</option>
+                <option value="3">Invernadero 3 - Zona Este</option>
+            </select>
+        </div>
+
+        <div class="sensores-grid">
+            <div class="sensor-card">
+                <div class="sensor-icon">🌡️</div>
+                <h4>Temperatura</h4>
+                <p class="sensor-value" id="temperatura">24.5°C</p>
+                <p class="sensor-status status-normal">Normal</p>
+                <div class="sensor-range">Rango óptimo: 18-28°C</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">💧</div>
+                <h4>Humedad del Suelo</h4>
+                <p class="sensor-value" id="humedad">68%</p>
+                <p class="sensor-status status-normal">Normal</p>
+                <div class="sensor-range">Rango óptimo: 60-80%</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">💨</div>
+                <h4>Humedad Ambiental</h4>
+                <p class="sensor-value" id="humedadAmbiental">72%</p>
+                <p class="sensor-status status-normal">Normal</p>
+                <div class="sensor-range">Rango óptimo: 60-85%</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">☀️</div>
+                <h4>Luminosidad</h4>
+                <p class="sensor-value" id="luminosidad">850 lux</p>
+                <p class="sensor-status status-normal">Normal</p>
+                <div class="sensor-range">Rango óptimo: 400-1000 lux</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">⚗️</div>
+                <h4>pH del Suelo</h4>
+                <p class="sensor-value" id="ph">6.8</p>
+                <p class="sensor-status status-normal">Normal</p>
+                <div class="sensor-range">Rango óptimo: 6.0-7.5</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">⚡</div>
+                <h4>Conductividad Eléctrica</h4>
+                <p class="sensor-value" id="conductividad">1.8 mS/cm</p>
+                <p class="sensor-status status-normal">Normal</p>
+                <div class="sensor-range">Rango óptimo: 1.5-2.5 mS/cm</div>
+            </div>
+        </div>
+
+        <div class="grafica-container">
+            <h3>Gráfica de Temperatura - Últimas 24 horas</h3>
+            <canvas id="graficaTemperatura"></canvas>
+        </div>
+
+        <div class="alertas-container">
+            <h3>Alertas del Sistema</h3>
+            <div class="alerta alerta-info">
+                <span class="alerta-icon">ℹ️</span>
+                <div class="alerta-contenido">
+                    <strong>Sistema funcionando correctamente</strong>
+                    <p>Todos los sensores reportan valores dentro del rango normal</p>
+                    <span class="alerta-tiempo">Hace 2 minutos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Asignación de Profesores -->
+    <div class="container">
+        <h2>ASIGNAR PROFESORES A CURSOS</h2>
+        
+        <div class="form-asignacion">
+            <div class="form-group">
+                <label for="cursoSelect"><strong>Seleccionar Curso:</strong></label>
+                <select id="cursoSelect">
+                    <option value="">-- Seleccione un curso --</option>
+                    <option value="1">Curso 1: Plantación Exitosa</option>
+                    <option value="2">Curso 2: Cultivo Exótico</option>
+                    <option value="3">Curso 3: Cultivo Limpio</option>
+                    <option value="4">Curso 4: GreenLab</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="profesorSelect"><strong>Seleccionar Profesor:</strong></label>
+                <select id="profesorSelect">
+                    <option value="">-- Seleccione un profesor --</option>
+                    <option value="1">Dr. Juan Pérez - Ingeniería</option>
+                    <option value="2">Dra. María González - Nutrición</option>
+                    <option value="3">Ing. Carlos Ramírez - Agronomía</option>
+                    <option value="4">Lic. Ana Martínez - Administración</option>
+                    <option value="5">M.C. Roberto López - Biología</option>
+                    <option value="6">Arq. Laura Sánchez - Diseño</option>
+                    <option value="7">Dr. Miguel Torres - Química</option>
+                    <option value="8">Ing. Patricia Ruiz - Sistemas</option>
+                </select>
+            </div>
+
+            <button class="btn-asignar-grande" onclick="guardarAsignacion()">Guardar Asignación</button>
+        </div>
+
+        <div class="tabla-asignaciones">
+            <h3>Asignaciones Actuales</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Profesor(es)</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaAsignaciones">
+                    <tr>
+                        <td>Plantación Exitosa</td>
+                        <td>Dr. Juan Pérez</td>
+                        <td><span class="badge badge-activo">Activo</span></td>
+                        <td><button class="btn-small" onclick="modificarAsignacion(1)">Modificar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Cultivo Exótico</td>
+                        <td>Dra. María González</td>
+                        <td><span class="badge badge-activo">Activo</span></td>
+                        <td><button class="btn-small" onclick="modificarAsignacion(2)">Modificar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Cultivo Limpio</td>
+                        <td>Ing. Carlos Ramírez</td>
+                        <td><span class="badge badge-activo">Activo</span></td>
+                        <td><button class="btn-small" onclick="modificarAsignacion(3)">Modificar</button></td>
+                    </tr>
+                    <tr>
+                        <td>GreenLab</td>
+                        <td>Equipo: Dr. Juan Pérez, Arq. Laura Sánchez, Lic. Ana Martínez</td>
+                        <td><span class="badge badge-activo">Activo</span></td>
+                        <td><button class="btn-small" onclick="modificarAsignacion(4)">Modificar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Reportes y Análisis -->
+    <div class="container">
+        <h2>REPORTES Y ANÁLISIS</h2>
+        
+        <div class="reportes-grid">
+            <div class="reporte-card">
+                <h4>Reporte de Inscripciones</h4>
+                <p>Genera reportes detallados de estudiantes inscritos por curso</p>
+                <button class="btn-reporte" onclick="generarReporte('inscripciones')">Generar Reporte</button>
+            </div>
+
+            <div class="reporte-card">
+                <h4>Análisis de Rendimiento</h4>
+                <p>Estadísticas de desempeño por curso y profesor</p>
+                <button class="btn-reporte" onclick="generarReporte('rendimiento')">Generar Reporte</button>
+            </div>
+
+            <div class="reporte-card">
+                <h4>Producción de Invernaderos</h4>
+                <p>Reporte de producción y rendimiento de cultivos</p>
+                <button class="btn-reporte" onclick="generarReporte('produccion')">Generar Reporte</button>
+            </div>
+
+            <div class="reporte-card">
+                <h4>Mantenimiento de Sistemas</h4>
+                <p>Historial y programación de mantenimiento</p>
+                <button class="btn-reporte" onclick="generarReporte('mantenimiento')">Generar Reporte</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
