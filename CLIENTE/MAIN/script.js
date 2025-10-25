@@ -32,3 +32,9 @@ function conectar() {
     });
 }
 
+// INICIAR SESIÓN
+function iniciar() {
+    const datos = {
+        //Rellenar
+    }};
+
